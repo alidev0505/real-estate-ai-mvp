@@ -1,0 +1,10 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-mist text-ink font-sans antialiased; }
+:focus-visible { outline: 2px solid #0E5A4F; outline-offset: 2px; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:opacity-50; }
+.btn-primary { @apply bg-pine text-white hover:bg-pine-dark; }
+.btn-ghost { @apply bg-white text-ink border border-line hover:bg-mist; }
+.card { @apply bg-white border border-line rounded-xl shadow-soft; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+.msg { animation: rise .25s ease-out; }
+@media (prefers-reduced-motion: reduce) { .msg { animation: none; } }
